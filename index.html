@@ -9,16 +9,23 @@
     <link rel="icon" href="https://raw.githubusercontent.com/LarryRMX/LarryRMX.github.io/refs/heads/main/favicon.ico" type="image/x-icon">
     
     <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+      }
+    
       body {
         background-image: url('https://raw.githubusercontent.com/LarryRMX/LarryRMX.github.io/refs/heads/main/Background.webp');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        height: 1080px;
-        width: 1920%;
+        min-height: 200vh; /* Simulates enough vertical space to scroll */
+        width: 100%; /* Keeps body within viewport width */
       }
     </style>
+
   </head>
   <body>
     <main>
