@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scryfall-Style Grid</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background: #1b1d22;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: #eee;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fafafa;
+}
+
+/* Four-wide responsive grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+@media (max-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Card image styling */
+.card-image {
+    overflow: hidden;
+    border-radius: 14px;
+    background: #2d3138;
+    aspect-ratio: 0.715;
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.45),
+        0 8px 20px rgba(0,0,0,.35);
+    transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+}
+
+.card:hover .card-image {
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.45),
+        0 14px 30px rgba(0,0,0,.45);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 2px;
+}
+
+.card-title {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.card-subtitle {
+    color: #b6bbc5;
+    font-size: 13px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Search Results</h1>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://raw.githubusercontent.com/LarryRMX/LarryRMX.github.io/refs/heads/main/Peril%2C%20Scorching%20Scales.png" alt="Card 1">
+            </div>
+            <div class="card-info">
+                <div class="card-title">Peril, Scorching Scales</div>
+                <div class="card-subtitle">R · #146</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://via.placeholder.com/488x680?text=Card+2" alt="Card 2">
+            </div>
+            <div class="card-info">
+                <div class="card-title">Counterspell</div>
+                <div class="card-subtitle">2XM · #49</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://via.placeholder.com/488x680?text=Card+3" alt="Card 3">
+            </div>
+            <div class="card-info">
+                <div class="card-title">Birds of Paradise</div>
+                <div class="card-subtitle">M12 · #165</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://via.placeholder.com/488x680?text=Card+4" alt="Card 4">
+            </div>
+            <div class="card-info">
+                <div class="card-title">Wrath of God</div>
+                <div class="card-subtitle">10E · #61</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://via.placeholder.com/488x680?text=Card+5" alt="Card 5">
+            </div>
+            <div class="card-info">
+                <div class="card-title">Doom Blade</div>
+                <div class="card-subtitle">M14 · #96</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://via.placeholder.com/488x680?text=Card+6" alt="Card 6">
+            </div>
+            <div class="card-info">
+                <div class="card-title">Cultivate</div>
+                <div class="card-subtitle">M21 · #177</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://via.placeholder.com/488x680?text=Card+7" alt="Card 7">
+            </div>
+            <div class="card-info">
+                <div class="card-title">Ponder</div>
+                <div class="card-subtitle">M12 · #73</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="https://via.placeholder.com/488x680?text=Card+8" alt="Card 8">
+            </div>
+            <div class="card-info">
+                <div class="card-title">Serra Angel</div>
+                <div class="card-subtitle">M10 · #34</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
